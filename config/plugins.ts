@@ -7,14 +7,14 @@ module.exports = ({ env }) => ({
           rootPath: env('CDN_ROOT_PATH'),
           s3Options: {
             credentials: {
-              accessKeyId: 'AKIAZQ3DTERCNVSMBTXO',
-              secretAccessKey: '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',
+              accessKeyId: "ACCESS_KEY_ID",
+              secretAccessKey: 'SECRET_ACCESS_KEY',
             },
-            region: 'eu-west-1',
+            region: 'us-east-2',
             params: {
               ACL: env('AWS_ACL', 'public-read'),
               signedUrlExpires: env('AWS_SIGNED_URL_EXPIRES', 15 * 60),
-              Bucket: 'ecommerce-strapi-one',
+              Bucket: 'ecommerce-strapi-two',
             },
           },
         },
