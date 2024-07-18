@@ -7,8 +7,8 @@ module.exports = ({ env }) => ({
           rootPath: env('CDN_ROOT_PATH'),
           s3Options: {
             credentials: {
-              accessKeyId: "ACCESS_KEY_ID",
-              secretAccessKey: 'SECRET_ACCESS_KEY',
+              accessKeyId: env("ACCESS_KEY_ID"),
+              secretAccessKey: env("SECRET_ACCESS_KEY"),
             },
             region: 'us-east-2',
             params: {
