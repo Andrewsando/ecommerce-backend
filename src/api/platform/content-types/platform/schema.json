@@ -4,7 +4,8 @@
   "info": {
     "singularName": "platform",
     "pluralName": "platforms",
-    "displayName": "Platform"
+    "displayName": "Platform",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -24,13 +25,13 @@
       "type": "integer",
       "required": true
     },
-    "images": {
-      "allowedTypes": [
-        "images"
-      ],
+    "icon": {
       "type": "media",
       "multiple": false,
-      "required": true
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
     }
   }
 }

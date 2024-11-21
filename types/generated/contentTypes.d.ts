@@ -770,8 +770,7 @@ export interface PluginUsersPermissionsUser extends Schema.CollectionType {
       'manyToOne',
       'plugin::users-permissions.role'
     >;
-    firstname: Attribute.String;
-    Lastname: Attribute.String;
+    fullname: Attribute.Text & Attribute.Required;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     createdBy: Attribute.Relation<
@@ -795,12 +794,13 @@ export interface ApiAddressAddress extends Schema.CollectionType {
     singularName: 'address';
     pluralName: 'addresses';
     displayName: 'address';
+    description: '';
   };
   options: {
     draftAndPublish: false;
   };
   attributes: {
-    titulo: Attribute.String & Attribute.Required;
+    title: Attribute.String & Attribute.Required;
     name: Attribute.String & Attribute.Required;
     address: Attribute.String & Attribute.Required;
     city: Attribute.String & Attribute.Required;
@@ -910,6 +910,7 @@ export interface ApiPlatformPlatform extends Schema.CollectionType {
     singularName: 'platform';
     pluralName: 'platforms';
     displayName: 'Platform';
+    description: '';
   };
   options: {
     draftAndPublish: true;
@@ -918,7 +919,7 @@ export interface ApiPlatformPlatform extends Schema.CollectionType {
     Title: Attribute.String & Attribute.Required;
     slug: Attribute.UID<'api::platform.platform', 'Title'> & Attribute.Required;
     order: Attribute.Integer & Attribute.Required;
-    images: Attribute.Media<'images'> & Attribute.Required;
+    icon: Attribute.Media<'images'> & Attribute.Required;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;

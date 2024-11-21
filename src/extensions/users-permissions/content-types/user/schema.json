@@ -65,11 +65,9 @@
       "inversedBy": "users",
       "configurable": false
     },
-    "firstname": {
-      "type": "string"
-    },
-    "Lastname": {
-      "type": "string"
+    "fullname": {
+      "type": "text",
+      "required": true
     }
   }
 }
