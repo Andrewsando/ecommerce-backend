@@ -1,7 +1,14 @@
 export default [
   'strapi::logger',
   'strapi::errors',
-  'strapi::cors',
+  {
+    name: 'strapi::cors',
+    config: {
+      enabled: true, // deprecated in v4.25.8
+      headers: '*',
+      origin: ['http://localhost:1337', 'http://localhost:3000', 'https://ecommerce-backend-gy2q.onrender.com']
+    }
+  },
   'strapi::poweredBy',
   'strapi::query',
   'strapi::body',
