@@ -6,7 +6,7 @@ export default [
     config: {
       enabled: true, // deprecated in v4.25.8
       headers: '*',
-      origin: ['http://localhost:1337', 'http://localhost:3000', 'https://ecommerce-backend-gy2q.onrender.com']
+      origin: ['http://localhost:1337', 'http://localhost:3000', 'https://gaming-ecommerce.netlify.app']
     }
   },
   'strapi::poweredBy',
